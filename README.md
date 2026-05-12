@@ -1,6 +1,6 @@
 # Nimbus Homebrew Tap
 
-This is the official [Homebrew](https://brew.sh) tap for Nimbus and AgentStation tools.
+This is the official [Homebrew](https://brew.sh) tap for [Nimbus](https://github.com/nimbus/nimbus).
 
 ## Installation
 
@@ -10,8 +10,6 @@ brew tap nimbus/tap
 
 ## Available Casks
 
-Casks install pre-built binaries from GitHub releases.
-
 ### nimbus
 
 Self-hosted JavaScript backend runtime powered by V8.
@@ -19,76 +17,6 @@ Self-hosted JavaScript backend runtime powered by V8.
 ```bash
 brew install nimbus/tap/nimbus
 ```
-
-### starmap
-
-AI Model Catalog System - Discover, compare, and sync AI models across providers.
-
-```bash
-brew install agentstation/tap/starmap
-```
-
-### tokenizer
-
-High-performance tokenizer implementations in Go with unified CLI. Features Llama 3 tokenizer with exact compatibility, streaming support, and comprehensive tooling.
-
-```bash
-brew install agentstation/tap/tokenizer
-```
-
-### vhs
-
-A tool for recording terminal GIFs and SVGs. AgentStation fork with SVG output support.
-
-```bash
-brew install agentstation/tap/vhs
-```
-
-## Available Formulas
-
-Formulas build from source.
-
-### pocket
-
-Graph execution engine for LLM workflows - CLI tool for executing workflows defined as graphs.
-
-```bash
-brew install agentstation/tap/pocket
-```
-
-### tydirium
-
-Email authentication checker - "It's an older email, sir, but it checks out."
-
-```bash
-brew install agentstation/tap/tydirium
-```
-
-## Alternative Installation Methods
-
-These tools are also available via [Nix](https://nixos.org/) and [Devbox](https://www.jetify.com/devbox):
-
-### Using Devbox
-```bash
-devbox add github:agentstation/nix-packages#nimbus
-devbox add github:agentstation/nix-packages#starmap
-devbox add github:agentstation/nix-packages#tokenizer
-devbox add github:agentstation/nix-packages#vhs
-devbox add github:agentstation/nix-packages#pocket
-devbox add github:agentstation/nix-packages#tydirium
-```
-
-### Using Nix
-```bash
-nix run github:agentstation/nix-packages#nimbus -- --help
-nix run github:agentstation/nix-packages#starmap -- --help
-nix run github:agentstation/nix-packages#tokenizer -- --help
-nix run github:agentstation/nix-packages#vhs -- --help
-nix run github:agentstation/nix-packages#pocket -- --help
-nix run github:agentstation/nix-packages#tydirium -- --help
-```
-
-For more Nix installation options, see [agentstation/nix-packages](https://github.com/agentstation/nix-packages).
 
 ## Development
 
