@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Repository Purpose
 
-This is the official Homebrew tap for AgentStation tools. It contains formula definitions for installing AgentStation command-line tools via Homebrew on macOS and Linux.
+This is the official Homebrew tap for Nimbus and AgentStation tools. It contains formula definitions for installing command-line tools via Homebrew on macOS and Linux.
 
 ## Repository Structure
 
@@ -22,7 +22,7 @@ This is the official Homebrew tap for AgentStation tools. It contains formula de
 brew install --build-from-source ./Formula/<name>.rb
 
 # Test the formula installation
-brew test agentstation/tap/<formula-name>
+brew test nimbus/tap/<formula-name>
 
 # Uninstall to test fresh installs
 brew uninstall <formula-name>

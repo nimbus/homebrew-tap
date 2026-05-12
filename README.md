@@ -1,23 +1,23 @@
-# AgentStation Homebrew Tap
+# Nimbus Homebrew Tap
 
-This is the official [Homebrew](https://brew.sh) tap for AgentStation tools.
+This is the official [Homebrew](https://brew.sh) tap for Nimbus and AgentStation tools.
 
 ## Installation
 
 ```bash
-brew tap agentstation/tap
+brew tap nimbus/tap
 ```
 
 ## Available Casks
 
 Casks install pre-built binaries from GitHub releases.
 
-### neovex
+### nimbus
 
 Self-hosted JavaScript backend runtime powered by V8.
 
 ```bash
-brew install agentstation/tap/neovex
+brew install nimbus/tap/nimbus
 ```
 
 ### starmap
@@ -70,7 +70,7 @@ These tools are also available via [Nix](https://nixos.org/) and [Devbox](https:
 
 ### Using Devbox
 ```bash
-devbox add github:agentstation/nix-packages#neovex
+devbox add github:agentstation/nix-packages#nimbus
 devbox add github:agentstation/nix-packages#starmap
 devbox add github:agentstation/nix-packages#tokenizer
 devbox add github:agentstation/nix-packages#vhs
@@ -80,7 +80,7 @@ devbox add github:agentstation/nix-packages#tydirium
 
 ### Using Nix
 ```bash
-nix run github:agentstation/nix-packages#neovex -- --help
+nix run github:agentstation/nix-packages#nimbus -- --help
 nix run github:agentstation/nix-packages#starmap -- --help
 nix run github:agentstation/nix-packages#tokenizer -- --help
 nix run github:agentstation/nix-packages#vhs -- --help
