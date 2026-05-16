@@ -1,18 +1,18 @@
 cask "nimbus-desktop" do
+  version "0.1.0"
+  sha256 "1a263bd0fd0a9ed8ded9bea2a3f6e24c660688a7f9a10d2ed03482b851b60fa4"
+
+  url "https://github.com/nimbus/desktop/releases/download/v#{version}/nimbus-desktop-#{version}-universal.dmg"
   name "Nimbus Desktop"
   desc "Native desktop shell for the Nimbus operator console"
   homepage "https://github.com/nimbus/desktop"
-  version "0.1.0"
 
   livecheck do
     skip "Auto-generated on release."
   end
 
   auto_updates true
-  depends_on macos: ">= :sonoma"
-
-  url "https://github.com/nimbus/desktop/releases/download/v#{version}/nimbus-desktop-#{version}-universal.dmg"
-  sha256 "1a263bd0fd0a9ed8ded9bea2a3f6e24c660688a7f9a10d2ed03482b851b60fa4"
+  depends_on macos: :sonoma
 
   app "nimbus-desktop.app"
 
