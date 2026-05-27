@@ -2,7 +2,7 @@ cask "nimbus" do
   name "nimbus"
   desc "Self-hosted JavaScript backend runtime powered by V8"
   homepage "https://github.com/nimbus/nimbus"
-  version "0.1.32"
+  version "0.1.33"
 
   livecheck do
     skip "Auto-generated on release."
@@ -17,18 +17,18 @@ cask "nimbus" do
 
     on_arm do
       url "https://github.com/nimbus/nimbus/releases/download/v#{version}/nimbus_darwin_arm64.tar.gz"
-      sha256 "ae2f17f0d1fbb9bdb782173a8893e386971f68d3a4992120f41030aabc2db198"
+      sha256 "68a41a7bad37f7b8dda695a8bb8106a3027a402b752b6a779bae73e95e40139f"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/nimbus/nimbus/releases/download/v#{version}/nimbus_linux_x86_64.tar.gz"
-      sha256 "65fd3c461890c67d36d3d5645097fad28c5f847ee3b6ae165e889cd80802d56b"
+      sha256 "2cfd748c8013dad6b470727e1d2cef2dd862c88f6c11bbcc9a62549a46a66f75"
     end
     on_arm do
       url "https://github.com/nimbus/nimbus/releases/download/v#{version}/nimbus_linux_arm64.tar.gz"
-      sha256 "ae6d8b2045a24b630b6bc1404b2bf689a8432c6eb029e74d519ae6b04201fd6c"
+      sha256 "8779111e882f1047162e9d6a91ef6f55c53098ca190cb11399d45c9c5a033da7"
     end
   end
 
@@ -44,7 +44,7 @@ cask "nimbus" do
     "Quick start:"
     "  nimbus --help              # Show all commands"
     "  nimbus machine init        # Record the default macOS machine contract"
-    "  nimbus serve               # Auto-start the machine if needed"
+    "  nimbus start               # Start the server"
     ""
     "Documentation: https://github.com/nimbus/nimbus"
   end
