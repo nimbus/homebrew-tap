@@ -12,8 +12,11 @@ cask "nimbus" do
 
   on_macos do
     depends_on arch: :arm64
-    depends_on macos: ">= :sonoma"
-    depends_on formula: "slp/krunkit/krunkit"
+    depends_on macos: :sonoma
+    # No depends_on formula here: krunkit lives in a third-party tap,
+    # and Homebrew 6.0 tap-trust is non-transitive, so a nimbus/tap cask
+    # can never pre-trust libkrun/krun. The krunkit microVM chain is
+    # optional and documented in caveats instead.
 
     on_arm do
       url "https://github.com/nimbus/nimbus/releases/download/v#{version}/nimbus_darwin_arm64.tar.gz"
@@ -38,15 +41,23 @@ cask "nimbus" do
     end
   end
 
-  caveats do
-    "Nimbus has been installed!"
-    ""
-    "Quick start:"
-    "  nimbus --help              # Show all commands"
-    "  nimbus machine init        # Record the default macOS machine contract"
-    "  nimbus start               # Start the server"
-    ""
-    "Documentation: https://github.com/nimbus/nimbus"
-  end
-end
+  caveats <<~EOS
+    Nimbus is installed. Quick start:
+      nimbus --help              # Show all commands
+      nimbus start               # Start the server
 
+    Optional macOS microVM dev flow ('nimbus machine'):
+    it needs the krunkit chain (krunkit + gvproxy + libkrun) from the
+    libkrun/krun tap. Homebrew 6.0 requires you to trust a third-party
+    tap before installing from it (trust is per-tap, so this cask cannot
+    do it for you):
+
+      brew tap libkrun/krun
+      brew trust --tap libkrun/krun
+      brew install libkrun/krun/krunkit
+
+    The 'nimbus' server itself runs fine without this chain.
+
+    Documentation: https://github.com/nimbus/nimbus
+  EOS
+end
