@@ -2,7 +2,7 @@ cask "nimbus" do
   name "nimbus"
   desc "Self-hosted JavaScript backend runtime powered by V8"
   homepage "https://github.com/nimbus/nimbus"
-  version "0.1.47"
+  version "0.1.48"
 
   livecheck do
     skip "Auto-generated on release."
@@ -20,18 +20,18 @@ cask "nimbus" do
 
     on_arm do
       url "https://github.com/nimbus/nimbus/releases/download/v#{version}/nimbus_darwin_arm64.tar.gz"
-      sha256 "9aae21cdd452e7c91d942eb8d4f1f86d5e0db0e6c80f1b90891c8c2d4f981b3d"
+      sha256 "76f0b3d87cac5d453dc34fd9f5b65b1f8c6410d0f3d533fdf7fb5150e1b4bd47"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/nimbus/nimbus/releases/download/v#{version}/nimbus_linux_x86_64.tar.gz"
-      sha256 "38bf16d1dbf9d591ba0a1c2490efed45d9fffa822eac136ab6c7104c4f82147f"
+      sha256 "8db21f98e19fc29f0a84c815add8830761876a3576c7d75739be6d93b848158b"
     end
     on_arm do
       url "https://github.com/nimbus/nimbus/releases/download/v#{version}/nimbus_linux_arm64.tar.gz"
-      sha256 "24040e7a44531dc025ec924b5f0ec76517022271785c18086fe1b30d739d768b"
+      sha256 "2e287475b68aa87475053dd8f3ea4f4d0be1fb760cf78f17c0781d310bbe2e82"
     end
   end
 
@@ -65,3 +65,4 @@ cask "nimbus" do
     Documentation: https://github.com/nimbus/nimbus
   EOS
 end
+
