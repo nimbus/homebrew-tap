@@ -8,6 +8,9 @@ This is the official [Homebrew](https://brew.sh) tap for [Nimbus](https://github
 brew tap nimbus/tap
 ```
 
+Homebrew 6 requires trust for packages from third-party taps. The commands below
+trust each package separately. See [Homebrew tap trust](https://docs.brew.sh/Tap-Trust).
+
 ## Available Casks
 
 ### nimbus
@@ -15,7 +18,17 @@ brew tap nimbus/tap
 Self-hosted JavaScript backend runtime powered by V8.
 
 ```bash
-brew install nimbus/tap/nimbus
+brew trust --cask nimbus/tap/nimbus
+brew install --cask nimbus/tap/nimbus
+```
+
+### nimbus-desktop
+
+The Nimbus desktop console for macOS.
+
+```bash
+brew trust --cask nimbus/tap/nimbus-desktop
+brew install --cask nimbus/tap/nimbus-desktop
 ```
 
 ## Development
